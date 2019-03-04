@@ -4,7 +4,7 @@ Welcome to my webpage. I will be publishing html converts of my jupyter notebook
 
 ### Artificial Intelligence 
 
-- <a href="untitled.html">Page 2</a>One Hidden layer Neural Network
+- <a href="untitled.html">One Hidden layer Neural Network</a>
 
 ### Machine Learning 
 
