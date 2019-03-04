@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Artificial Intelligence and Machine Learning 
 
 You can use the [editor on GitHub](https://github.com/diptanshu-singh/ai640/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
