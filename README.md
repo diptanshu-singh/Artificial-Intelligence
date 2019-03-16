@@ -1,10 +1,11 @@
 ## Artificial Intelligence and Machine Learning 
 
-Welcome to my webpage. I will be publishing html converts of my jupyter notebook used while experimenting with various machine learning and deep learning algorithms while pursuing my graduate studies in statistics at Boston University. The actual codes without the markdown comments can be assessed from links given within the repository. 
+Artificial Intelligence is a process of Perception, Reasoning and Action. I am interested in the mathematics that goes behind each of these methods. This webpage is my attempt to explore applications and implementation of simple algorithms that solve complex problems. I'm an enthusiast of Intepretable Machine Learning, and I believe in DeepMinds motto - "Solve Intelligence. Use it to make world a better place"
 
-### Artificial Intelligence 
-
-- <a href="P1NeuralNetwork-2.html">One Hidden layer Neural Network</a>
+### Statistical Computing
 
 ### Machine Learning 
+
+### Deep Learning
+- <a href="P1NeuralNetwork-2.html">One Hidden layer Neural Network</a>
 
