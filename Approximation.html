@@ -318,9 +318,9 @@ $(document).ready(function () {
 <p>In numerical analysis, Newton’s method (also known as the Newton–Raphson method), named after Isaac Newton and Joseph Raphson, is a method for finding successively better approximations to the roots (or zeroes) of a real-valued function. It is one example of a root-finding algorithm.</p>
 <p>The Newton–Raphson method in one variable is implemented as follows:</p>
 <p>The method starts with a function f defined over the real numbers x, the function’s derivative f ′, and an initial guess x0 for a root of the function f. If the function satisfies the assumptions made in the derivation of the formula and the initial guess is close, then a better approximation x1 is</p>
-<p><span class="math display">\[{\displaystyle x_{1}=x_{0}-{\frac {f(x_{0})}{f&#39;(x_{0})}}\,.} x_{1}=x_{0}-{\frac {f(x_{0})}{f&#39;(x_{0})}}\,.\]</span> Geometrically, (x1, 0) is the intersection of the x-axis and the tangent of the graph of f at (x0, f (x0)).</p>
+<p><span class="math display">\[{\displaystyle x_{1}=x_{0}-{\frac {f(x_{0})}{f&#39;(x_{0})}}\,.}\]</span> Geometrically, (x1, 0) is the intersection of the x-axis and the tangent of the graph of f at (x0, f (x0)).</p>
 <p>The process is repeated as</p>
-<p><span class="math display">\[{\displaystyle x_{n+1}=x_{n}-{\frac {f(x_{n})}{f&#39;(x_{n})}}\,} x_{n+1}=x_{n}-{\frac {f(x_{n})}{f&#39;(x_{n})}}\,\]</span> until a sufficiently accurate value is reached.</p>
+<p><span class="math display">\[{\displaystyle x_{n+1}=x_{n}-{\frac {f(x_{n})}{f&#39;(x_{n})}}\,} \]</span> until a sufficiently accurate value is reached.</p>
 <div id="calculating-alpha-beta-from-a-given-gamma-distribution-using-nr-algorithm-on-alpha" class="section level3">
 <h3>Calculating alpha, beta from a given Gamma distribution using NR algorithm on alpha</h3>
 <p>Below I have implemented the Newton Rhapson method to calculate the parameters for a gamma distribution. The function ‘f’ here is the likelihood function. The variable ‘x’ is the term alpha in the gamma distribution. The Gamma distribution requires two parameters (alpha, beta) but in order to approximate the parameter alpha, the value of beta is calculated through method of moments, after every iteration.</p>
@@ -358,18 +358,18 @@ n &lt;- 100
 x &lt;- rgamma(n, 2.5, 1) 
 
 res1 &lt;- gamma.alpha.mle(x)</code></pre>
-<pre><code>## [1] alpha = 2.94054146038081 | lhood = -168.001740302056</code></pre>
-<pre><code>## [2] alpha = 2.94062257195733 | lhood = -168.001740280923</code></pre>
-<pre><code>## [3] alpha = 2.94062257430191 | lhood = -168.001740280923</code></pre>
+<pre><code>## [1] alpha = 2.91134537676027 | lhood = -172.525795855384</code></pre>
+<pre><code>## [2] alpha = 2.91142027517776 | lhood = -172.525795836985</code></pre>
+<pre><code>## [3] alpha = 2.91142027719767 | lhood = -172.525795836984</code></pre>
 <pre class="r"><code>res1</code></pre>
 <pre><code>## $alpha
-## [1] 2.940623
+## [1] 2.91142
 ## 
 ## $beta
-## [1] 1.167575
+## [1] 1.108889
 ## 
 ## $vcov
-## [1] 0.1556773</code></pre>
+## [1] 0.1524543</code></pre>
 </div>
 <div id="calculating-alpha-beta-using-bivariate-newton-rhapson-on-both-alpha-and-beta" class="section level3">
 <h3>Calculating alpha, beta using bivariate Newton Rhapson on both alpha and beta</h3>
@@ -413,20 +413,20 @@ n &lt;- 500
 x &lt;- rgamma(n, 5, 3) 
 
 res2 &lt;- gamma.mle(x)</code></pre>
-<pre><code>## [1] alpha = 4.59451841434095 | lhood = -545.859167422292</code></pre>
-<pre><code>## [2] alpha = 4.59680561711581 | lhood = -545.859134207142</code></pre>
-<pre><code>## [3] alpha = 4.59680679381091 | lhood = -545.859134207133</code></pre>
+<pre><code>## [1] alpha = 5.1427205099826 | lhood = -519.8682177595</code></pre>
+<pre><code>## [2] alpha = 5.15385757836242 | lhood = -519.867592888983</code></pre>
+<pre><code>## [3] alpha = 5.15388247066543 | lhood = -519.86759288588</code></pre>
 <pre class="r"><code>res2</code></pre>
 <pre><code>## $alpha
-## [1] 4.596806
+## [1] 5.153858
 ## 
 ## $beta
-## [1] 2.754812
+## [1] 3.099349
 ## 
 ## $vcov
 ##            [,1]       [,2]
-## [1,] 0.07885667 0.04725788
-## [2,] 0.04725788 0.03162295</code></pre>
+## [1,] 0.09983913 0.06003974
+## [2,] 0.06003974 0.03983346</code></pre>
 <pre class="r"><code># Mean of the distribution 
 mu &lt;- res2$alpha / res2$beta
 
@@ -435,10 +435,10 @@ mu &lt;- res2$alpha / res2$beta
 fit &lt;- glm(x ~ 1, family = Gamma)
 MASS::gamma.shape(fit)</code></pre>
 <pre><code>##                 
-## Alpha: 4.5968068
-## SE:    0.2808134</code></pre>
+## Alpha: 5.1538825
+## SE:    0.3159737</code></pre>
 <pre class="r"><code>c(res2$alpha, sqrt(res1$vcov), sqrt(res2$vcov[1,1]))</code></pre>
-<pre><code>## [1] 4.5968056 0.3945596 0.2808143</code></pre>
+<pre><code>## [1] 5.1538576 0.3904540 0.3159733</code></pre>
 <pre class="r"><code># Coefficients from both the methods are same</code></pre>
 </div>
 <div id="using-newton-rhapson-method-for-calculating-betas-in-logistic-regression" class="section level3">
@@ -469,45 +469,45 @@ fit.logistic &lt;- function (y, X, tolerance = 1e-10, max.iterations = 10) {
 y &lt;- rbinom(n, 1, inv.logit(1 - 2 * x))
 X &lt;- model.matrix(~ x)
 (res &lt;- fit.logistic(y, X))</code></pre>
-<pre><code>## [1] lhood = -213.581345392407</code></pre>
-<pre><code>## [2] lhood = -207.52819412918</code></pre>
-<pre><code>## [3] lhood = -207.074619044022</code></pre>
-<pre><code>## [4] lhood = -207.071357698171</code></pre>
-<pre><code>## [5] lhood = -207.07135750572</code></pre>
-<pre><code>## [6] lhood = -207.07135750572</code></pre>
+<pre><code>## [1] lhood = -187.113480327674</code></pre>
+<pre><code>## [2] lhood = -179.192228587408</code></pre>
+<pre><code>## [3] lhood = -178.351909850074</code></pre>
+<pre><code>## [4] lhood = -178.338506960706</code></pre>
+<pre><code>## [5] lhood = -178.33850281942</code></pre>
+<pre><code>## [6] lhood = -178.33850281942</code></pre>
 <pre><code>## $beta
 ##            [,1]
-## [1,]  0.6494467
-## [2,] -1.5135307
+## [1,]  0.6406201
+## [2,] -1.7206999
 ## 
 ## $vcov
-##            [,1]        [,2]
-## [1,]  0.1031204 -0.06982170
-## [2,] -0.0698217  0.05547461</code></pre>
+##             [,1]        [,2]
+## [1,]  0.12838010 -0.09035378
+## [2,] -0.09035378  0.07414376</code></pre>
 <pre class="r"><code>beta0 &lt;- coef(lm(logit((y + .5) / 2) ~ X - 1))
 (fit &lt;- glm(y ~ x, family = binomial, start = beta0,
            control = list(epsilon = 1e-10, trace = T)))</code></pre>
-<pre><code>## Deviance = 427.1627 Iterations - 1
-## Deviance = 415.0564 Iterations - 2
-## Deviance = 414.1492 Iterations - 3
-## Deviance = 414.1427 Iterations - 4
-## Deviance = 414.1427 Iterations - 5
-## Deviance = 414.1427 Iterations - 6</code></pre>
+<pre><code>## Deviance = 374.227 Iterations - 1
+## Deviance = 358.3845 Iterations - 2
+## Deviance = 356.7038 Iterations - 3
+## Deviance = 356.677 Iterations - 4
+## Deviance = 356.677 Iterations - 5
+## Deviance = 356.677 Iterations - 6</code></pre>
 <pre><code>## 
 ## Call:  glm(formula = y ~ x, family = binomial, start = beta0, control = list(epsilon = 1e-10, 
 ##     trace = T))
 ## 
 ## Coefficients:
 ## (Intercept)            x  
-##      0.6494      -1.5135  
+##      0.6406      -1.7207  
 ## 
 ## Degrees of Freedom: 499 Total (i.e. Null);  498 Residual
-## Null Deviance:       471.4 
-## Residual Deviance: 414.1     AIC: 418.1</code></pre>
+## Null Deviance:       412.2 
+## Residual Deviance: 356.7     AIC: 360.7</code></pre>
 <pre class="r"><code>summary(fit)$cov.scaled # compare to res$vcov</code></pre>
 <pre><code>##             (Intercept)           x
-## (Intercept)   0.1031204 -0.06982170
-## x            -0.0698217  0.05547461</code></pre>
+## (Intercept)  0.12838010 -0.09035378
+## x           -0.09035378  0.07414376</code></pre>
 </div>
 </div>
 
