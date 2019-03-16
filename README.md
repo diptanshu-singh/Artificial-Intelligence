@@ -3,6 +3,10 @@ Artificial Intelligence is a process of Perception, Reasoning and Action. I am i
 <blockquote>Solve Intelligence. Use it to make world a better place</blockquote>
 
 ### Statistical Computing
+- <a href="Approximation.html">Non Linear Equations (Newton Rhapson Method)</a>
+- <a href="EM.html">Expectation Maximization Algorithm</a>
+- <a href="RandomNumber.html">Psuedo Random Number Generation</a>
+- <a href="Sampling.html">Sampling Algorithms</a>
 
 ### Machine Learning 
 
