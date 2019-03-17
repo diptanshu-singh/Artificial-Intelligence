@@ -2,7 +2,7 @@ Artificial Intelligence is a process of Perception, Reasoning and Action. I am i
 
 <blockquote>Solve Intelligence. Use it to make world a better place</blockquote>
 
-I have put together algorithms/ code samples that I have written during my graduate studies in Statistics, which I found interesting and challenging. To view the HW projects, refer to the links in the last section.
+I have put together algorithms that I have written and explored during my graduate studies in Statistics as part of assignments and projects. 
 
 ### Statistical Computing
 - <a href="Approximation.html">Non Linear Equations (Newton Rhapson Method)</a>
@@ -32,10 +32,4 @@ I have put together algorithms/ code samples that I have written during my gradu
 
 ### Deep Learning
 - <a href="P1NeuralNetwork-2.html">One Hidden layer Neural Network</a>
-
-### Projects 
-- Statistical Modelling 
-- Statistical Computing
-- Machine Learning 
-- Artificial Intelligence
 
