@@ -6,7 +6,7 @@ Artificial Intelligence is a process of Perception, Reasoning and Action. I am i
 - <a href="Approximation.html">Non Linear Equations (Newton Rhapson Method)</a>
 - <a href="EM.html">Expectation Maximization Algorithm</a>
 - <a href="RandomNumber.html">Psuedo Random Number Generation</a>
-- <a href="Sampling.html">Sampling Algorithms</a><a href="Sampling.html">Sampling Algorithms</a>
+- <a href="Sampling.html">Sampling Algorithms</a>
 - <a href="hmm.html">Hidden Markov Chains</a>
 - <a href="mcmc.html">MCMC Methods</a>
 - <a href="hamiltonian.html">Hamiltonian/ Hybrid Markov Chains</a>
