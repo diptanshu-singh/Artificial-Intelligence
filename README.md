@@ -14,6 +14,19 @@ Artificial Intelligence is a process of Perception, Reasoning and Action. I am i
 - <a href="KDE.html">Kernel Density Estimation</a>
 
 ### Machine Learning 
+- Linear Regression 
+- Logistic Regression (Binary Clasification)
+- Generalized Linear Models
+- Mixed Effect Models 
+- Ridge/Lasso Regression
+- Discriminant Analysis for Classification
+- Splines and General Additive Models (GAMs)
+- Tree Based Methods
+- Bagging/ Boosting
+- Support Vector Machines
+- Association Rule Mining
+- Principle Component Analysis
+- Clustering
 
 ### Deep Learning
 - <a href="P1NeuralNetwork-2.html">One Hidden layer Neural Network</a>
