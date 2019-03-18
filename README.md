@@ -16,6 +16,7 @@ I have put together algorithms that I have written and explored during my gradua
 - <a href="KDE.html">Kernel Density Estimation</a>
 
 ### Machine Learning 
+(In progress...)
 - Linear Regression 
 - Logistic Regression (Binary Clasification)
 - Generalized Linear Models
