@@ -32,5 +32,5 @@ I have put together algorithms that I have written and explored during my gradua
 - Clustering
 
 ### Deep Learning
-- <a href="P1NeuralNetwork-2.html">One Hidden layer Neural Network</a>
+- <a href="P1NeuralNetwork-2.html">One Hidden layer Neural Network</a> 
 
