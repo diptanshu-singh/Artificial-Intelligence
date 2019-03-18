@@ -323,7 +323,7 @@ $(document).ready(function () {
 </div>
 <div id="kernel-function" class="section level2">
 <h2>Kernel Function</h2>
-<p>Kernel function can be seen as a measure of simillarity between two variables. We will pass the value <span class="math inline">\(u = (X - X_i)/h\)</span> and according to the kernel function decide, how close or far they are. This concept can easily be explanded in multi dimension but I have only implemnted it for 1D vector x below. Some common types of kernels are given below -</p>
+<p>Kernel function can be seen as a measure of simillarity between two data points. We will pass the value <span class="math inline">\(u = (X - X_i)/h\)</span> and according to the kernel function decide, how close or far they are. This concept can easily be explanded in multi dimension but I have only implemnted it for 1D vector x below. Some common types of kernels are given below -</p>
 <pre class="r"><code>#Parabolic kernel
 kepa &lt;- function (x) .75 / sqrt(5) * (abs(x) &lt; sqrt(5)) * (1 - x ^ 2 / 5)
 
